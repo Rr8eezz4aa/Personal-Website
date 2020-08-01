@@ -77,11 +77,8 @@ body {
     width: 50%;
     margin: 0 auto;
     background: #11998e;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #38ef7d, #11998e);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,11 +89,8 @@ body {
       text-align: center;
       font-family: Fira Code;
       background: #8E2DE2;
-      /* fallback for old browsers */
       background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-      /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #4A00E0, #8E2DE2);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       background-clip: text;
       -moz-background-clip: text;
       -webkit-background-clip: text;
@@ -178,11 +172,8 @@ h1.section-title {
   #contact .contact-container {
     width: 75%;
     background: #780206;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #061161, #780206);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #061161, #780206);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 50px;
     margin: 0 auto;
     padding: 20px;
@@ -190,22 +181,16 @@ h1.section-title {
     flex-direction: column; }
     #contact .contact-container .info p {
       background: #0f0c29;
-      /* fallback for old browsers */
       background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-      /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       border-radius: 100px;
       padding: 10px 20px;
       color: #ffd200;
       margin: 10px; }
       #contact .contact-container .info p b {
         background: #2980B9;
-        /* fallback for old browsers */
         background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);
-        /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -222,11 +207,8 @@ h1.section-title {
   width: 100px;
   height: 100px;
   background: #0f0c29;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 100px;
   display: flex;
   justify-content: center;
@@ -244,16 +226,10 @@ h1.section-title {
 .main-footer {
   color: #fff;
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 60px;
   background: #0575E6;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #021B79, #0575E6);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #021B79, #0575E6);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-align: center; }
-  .main-footer i {
-    font-size: 100%;
-    color: #ff0000; }
 
 /*# sourceMappingURL=style.css.map */
