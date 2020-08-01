@@ -21,6 +21,49 @@ html {
 body {
     font: 2vw $font;
     background: $main-bg;
+    overflow: hidden;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    .loader {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            border: 5px solid transparent;
+            border-right-color: #fff;
+            border-left-color: #fff;
+            animation: loading 2s infinite linear;
+            @keyframes loading {
+                100%{transform: rotate(360deg);}
+            }
+        }
+    }
+    &.loaded {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
 }
 
 .container {
@@ -101,6 +144,11 @@ body {
         align-self: center;
         padding: 30px;
         border-radius: 8px;
+        transition: all .4s ease-in-out;
+        transform: scale(.4) translateY(400px);
+        &.show {
+            transform: scale(1) translateY(0);
+        }
         h2 {
             text-align: center;
             font-family: Fira Code;

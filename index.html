@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=0.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">    
+    <script src="js/script.js?v=0.1"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="js/script.js"></script>
     <title>Reza Rafsanjani</title>
 </head>
 <body>
+    <div id="loading">
+        <div class="loader"><div></div></div>
+    </div>
     <div class="container">
         <div class="main-menu-container" id="navbar">
             <nav class="main-menu">
@@ -154,6 +156,13 @@
     </footer>
     <script>
         AOS.init();
+    </script>
+    <script>
+        setTimeout(()=>{
+            document.getElementById("loading").classList.add("loaded");
+            document.getElementById("aboutCard").classList.add("show");
+            document.body.style.overflow = "visible"
+        }, 600)
     </script>
 </body> 
 </html>
