@@ -13,9 +13,31 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font: 2vw "collegia", collegia;
+  font: 40px "collegia", collegia;
   background: #0c0032;
   overflow: hidden; }
+
+::-webkit-scrollbar {
+  width: 20px; }
+
+::-webkit-scrollbar-track {
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); }
+
+::-webkit-scrollbar-thumb {
+  background: #c31432;
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  background: linear-gradient(to right, #240b36, #c31432); }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dd1133;
+  background: -webkit-linear-gradient(to right, #391255, #dd1133);
+  background: linear-gradient(to right, #391255, #dd1133); }
+
+::selection {
+  background: #000;
+  color: #149414; }
 
 #loading {
   width: 100%;
@@ -74,10 +96,11 @@ body {
 
 .main-menu {
   width: 80%;
-  font-size: 2.5vw;
+  font-size: 3rem;
   margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   padding: 10px;
   padding-right: 20px; }
   .main-menu a {
@@ -103,12 +126,13 @@ body {
       opacity: 1;
       transform: scaleX(1); }
   .main-menu .logo {
+    width: 4.8rem;
     margin-right: auto;
     margin-left: 10px;
     display: flex;
     align-items: center; }
     .main-menu .logo img {
-      width: 4vw; }
+      width: 100%; }
 
 #about {
   height: 100vh;
@@ -116,7 +140,7 @@ body {
   justify-content: center;
   align-items: center; }
   #about div#aboutCard {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     background: #11998e;
     background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
@@ -134,6 +158,7 @@ body {
     #about div#aboutCard h2 {
       text-align: center;
       font-family: Fira Code;
+      font-size: 3.5rem;
       background: #8E2DE2;
       background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
       background: linear-gradient(to right, #4A00E0, #8E2DE2);
@@ -168,7 +193,8 @@ body {
 h1.section-title {
   text-align: center;
   padding: 70px 0 20px 0;
-  color: #ffc312; }
+  color: #ffc312;
+  font-size: 7rem; }
   h1.section-title::before {
     content: "{ "; }
   h1.section-title::after {
@@ -177,6 +203,7 @@ h1.section-title {
     color: red; }
 
 #skills {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -184,7 +211,7 @@ h1.section-title {
   flex-direction: column; }
   #skills .skills-container {
     padding: 10px;
-    font-size: 50px; }
+    font-size: 3rem; }
     #skills .skills-container .skills {
       color: white;
       display: flex;
@@ -203,7 +230,7 @@ h1.section-title {
         list-style: none;
         margin: 25px;
         border-radius: 20px;
-        padding: 10px; }
+        padding: .5rem; }
         #skills .skills-container .skills .skill i {
           background: #8E2DE2;
           background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
