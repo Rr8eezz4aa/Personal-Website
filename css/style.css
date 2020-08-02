@@ -118,7 +118,8 @@ body {
     align-items: center;
     overflow: hidden;
     transition: all .4s;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; }
     .main-menu .menu-icon span {
       width: 100%;
       height: 4px;
@@ -131,7 +132,8 @@ body {
     margin: 5px 25px;
     color: #ffc312;
     position: relative;
-    transition: transform 0.3s; }
+    transition: transform 0.3s;
+    -webkit-tap-highlight-color: transparent; }
     .main-menu a::after {
       content: "";
       width: 100%;
