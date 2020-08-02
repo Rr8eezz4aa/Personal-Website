@@ -1,6 +1,9 @@
 @font-face {
   font-family: "collegia";
   src: url("../fonts/collegia.ttf"); }
+@font-face {
+  font-family: "firacode";
+  src: url("../fonts/firacode.ttf"); }
 * {
   margin: 0;
   padding: 0;
@@ -206,7 +209,7 @@ body {
       transform: scale(1) translateY(0); }
     #about div#aboutCard h2 {
       text-align: center;
-      font-family: Fira Code;
+      font-family: "firacode", Fira Code;
       font-size: 3.5em;
       background: #8E2DE2;
       background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
