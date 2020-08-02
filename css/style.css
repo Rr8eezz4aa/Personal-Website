@@ -73,12 +73,23 @@ body {
       border: 5px solid transparent;
       border-right-color: #fff;
       border-left-color: #fff;
-      animation: loading 2s infinite linear; }
+      animation: loading 2s infinite linear;
+      -moz-animation: loading 2s infinite linear;
+      -o-animation: loading 2s infinite linear;
+      -webkit-animation: loading 2s infinite linear; }
 @keyframes loading {
   100% {
-    transform: rotate(360deg); } }
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
   #loading.loaded {
     transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
     opacity: 0; }
 
 .container {
@@ -93,10 +104,21 @@ body {
   z-index: 1384;
   position: fixed;
   transform: translateY(-100%);
-  transition: transform .3s ease-in-out;
+  -moz-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
   box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.14), 0 4px 22px 3px rgba(0, 0, 0, 0.12), 0 6px 7px -4px rgba(0, 0, 0, 0.4); }
   .main-menu-container.show {
-    transform: translateY(0); }
+    transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0); }
 
 .main-menu {
   width: 80%;
@@ -104,6 +126,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
   align-items: center;
   padding: 10px;
   padding-right: 20px; }
@@ -115,10 +138,14 @@ body {
     background: #323232;
     display: none;
     flex-direction: column;
+    -ms-flex-direction: column;
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    transition: all .4s;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent; }
     .main-menu .menu-icon span {
@@ -126,7 +153,10 @@ body {
       height: 4px;
       background: #878787;
       border-radius: 3px;
-      transition: all .4s; }
+      transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s; }
   .main-menu a {
     text-decoration: none;
     font-family: "collegia", collegia;
@@ -134,6 +164,9 @@ body {
     color: #ffc312;
     position: relative;
     transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
     -webkit-tap-highlight-color: transparent; }
     .main-menu a::after {
       content: "";
@@ -144,12 +177,23 @@ body {
       background: #ffc312;
       position: absolute;
       opacity: 0;
-      transition: all .3s;
-      transform: scaleX(0.5); }
+      transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transform: scaleX(0.5);
+      -moz-transform: scaleX(0.5);
+      -o-transform: scaleX(0.5);
+      -ms-transform: scaleX(0.5);
+      -webkit-transform: scaleX(0.5); }
     .main-menu a:hover::after {
       bottom: 10%;
       opacity: 1;
-      transform: scaleX(1); }
+      transform: scaleX(1);
+      -moz-transform: scaleX(1);
+      -o-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+      -webkit-transform: scaleX(1); }
   .main-menu .logo {
     width: 4.8rem;
     margin-right: auto;
@@ -164,11 +208,18 @@ body {
   right: 0;
   top: 0;
   margin: 10px;
-  transition: margin 0s; }
+  transition: margi 0s;
+  -moz-transition: margi 0s;
+  -webkit-transition: margi 0s;
+  -o-transition: margi 0s; }
   #navbar.open .menu-icon span {
     position: absolute; }
   #navbar.open .menu-icon span:nth-child(2) {
     transform: translateX(100%) rotate(90deg);
+    -moz-transform: translateX(100%) rotate(90deg);
+    -o-transform: translateX(100%) rotate(90deg);
+    -ms-transform: translateX(100%) rotate(90deg);
+    -webkit-transform: translateX(100%) rotate(90deg);
     opacity: 0; }
   #navbar.open .menu-icon span:nth-child(1), #navbar.open .menu-icon span:nth-child(3) {
     left: 0;
@@ -176,13 +227,22 @@ body {
     width: 80%;
     margin: 0 auto; }
   #navbar.open .menu-icon span:nth-child(1) {
-    transform: rotate(45deg); }
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg); }
   #navbar.open .menu-icon span:nth-child(3) {
-    transform: rotate(-45deg); }
+    transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
 #navbar.open .main-menu {
   height: auto;
   position: relative;
-  flex-direction: column; }
+  flex-direction: column;
+  -ms-flex-direction: column; }
   #navbar.open .main-menu a {
     display: block; }
   #navbar.open .main-menu .logo {
@@ -201,15 +261,27 @@ body {
     background: linear-gradient(to right, #38ef7d, #11998e);
     display: flex;
     flex-direction: column;
+    -ms-flex-direction: column;
     align-items: center;
     align-self: center;
     padding: 30px;
     border-radius: 8px;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
     transform: scale(0.4) translateY(400px);
+    -moz-transform: scale(0.4) translateY(400px);
+    -o-transform: scale(0.4) translateY(400px);
+    -ms-transform: scale(0.4) translateY(400px);
+    -webkit-transform: scale(0.4) translateY(400px);
     font-size: 16px; }
     #about div#aboutCard.show {
-      transform: scale(1) translateY(0); }
+      transform: scale(1) translateY(0);
+      -moz-transform: scale(1) translateY(0);
+      -o-transform: scale(1) translateY(0);
+      -ms-transform: scale(1) translateY(0);
+      -webkit-transform: scale(1) translateY(0); }
     #about div#aboutCard h2 {
       text-align: center;
       font-family: "firacode", Fira Code;
@@ -269,7 +341,8 @@ h1.section-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  -ms-flex-direction: column; }
   #skills .skills-container {
     padding: 10px;
     font-size: 3rem; }
@@ -277,6 +350,7 @@ h1.section-title {
       color: white;
       display: flex;
       flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       width: 75%;
       justify-content: space-around;
       margin: 0 auto;
@@ -288,6 +362,7 @@ h1.section-title {
         display: flex;
         align-items: center;
         flex-direction: column;
+        -ms-flex-direction: column;
         list-style: none;
         margin: 25px;
         border-radius: 20px;
@@ -312,7 +387,8 @@ h1.section-title {
     margin: 0 auto;
     padding: 20px;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    -ms-flex-direction: column; }
     #contact .contact-container .info p {
       background: #0f0c29;
       background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -335,6 +411,7 @@ h1.section-title {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       justify-content: space-around; }
 
 #contact .icons a {
@@ -350,7 +427,10 @@ h1.section-title {
   margin: 10px;
   cursor: pointer;
   box-shadow: inset 0 0 0 #000;
-  transition: all .3s; }
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s; }
   #contact .icons a:hover {
     box-shadow: inset 0 0 10px #000; }
   #contact .icons a img {
@@ -401,6 +481,7 @@ h1.section-title {
   .main-menu {
     width: 90%;
     flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
     height: 60px;
     align-items: center;
     justify-content: flex-end; }

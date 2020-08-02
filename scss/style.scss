@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 @font-face {
     font-family: "collegia";
@@ -83,14 +84,14 @@ body {
             border: 5px solid transparent;
             border-right-color: #fff;
             border-left-color: #fff;
-            animation: loading 2s infinite linear;
+            @include animation(loading 2s infinite linear);
             @keyframes loading {
-                100%{transform: rotate(360deg);}
+                100%{@include transform(rotate(360deg))}
             }
         }
     }
     &.loaded {
-        transform: translateX(-100%);
+        @include transform(translateX(-100%));
         opacity: 0;
     }
 }
@@ -107,13 +108,13 @@ body {
     background: linear-gradient(to right, #6c2cda, #1d2671);
     z-index: 1384;
     position: fixed;
-    transform: translateY(-100%);
-    transition: transform .3s ease-in-out;
+    @include transform(translateY(-100%));
+    @include transition(transform .3s ease-in-out);
     box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.14),
                 0 4px 22px 3px rgba(0, 0, 0, 0.12),
                 0 6px 7px -4px rgba(0, 0, 0, 0.4);
     &.show {
-        transform: translateY(0);
+        @include transform(translateY(0));
     }
 }
 
@@ -123,6 +124,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
     align-items: center;
     padding: 10px;
     padding-right: 20px;
@@ -133,11 +135,12 @@ body {
         border-radius: 7px;
         background: #323232;
         display: none;
-        flex-direction: column;       
+        flex-direction: column;
+        -ms-flex-direction: column;
         justify-content: space-around;
         align-items: center;
         overflow: hidden;
-        transition: all .4s;
+        @include transition(all .4s);
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
         span {
@@ -145,7 +148,7 @@ body {
             height: 4px;
             background: #878787;
             border-radius: 3px;
-            transition: all .4s;
+            @include transition(all .4s);
         }
     }
     a {
@@ -153,8 +156,8 @@ body {
         font-family: $font;
         margin: 5px 25px;
         color: $menu-item-color;
-        position: relative;
-        transition: transform 0.3s;
+        position: relative;        
+        @include transition(transform 0.3s);
         -webkit-tap-highlight-color: transparent;
         &::after {
             content: "";
@@ -165,13 +168,13 @@ body {
             background: $menu-item-color;
             position: absolute;
             opacity: 0;
-            transition: all .3s;
-            transform: scaleX(0.5);
+            @include transition(all .3s);
+            @include transform(scaleX(0.5));
         }
         &:hover::after {
             bottom: 10%;
             opacity: 1;
-            transform: scaleX(1);
+            @include transform(scaleX(1));
         }
     }
     .logo {
@@ -192,12 +195,12 @@ body {
         right: 0;
         top: 0;
         margin: 10px;
-        transition: margin 0s;
+        @include transition(margi 0s);
         span {
             position: absolute;
         }
         span:nth-child(2) {
-            transform: translateX(100%) rotate(90deg);
+            @include transform(translateX(100%) rotate(90deg));
             opacity: 0;
         }
         span:nth-child(1), span:nth-child(3) {
@@ -207,16 +210,17 @@ body {
             margin: 0 auto;
         }
         span:nth-child(1) {
-            transform: rotate(45deg);
+            @include transform(rotate(45deg));
         }
         span:nth-child(3) {
-            transform: rotate(-45deg);
+            @include transform(rotate(-45deg));
         }
     }
     .main-menu {
         height: auto;
         position: relative;
         flex-direction: column;
+        -ms-flex-direction: column;
         a {
             display: block;
         }
@@ -239,15 +243,16 @@ body {
         background: linear-gradient(to right, #38ef7d, #11998e);
         display: flex;
         flex-direction: column;
+        -ms-flex-direction: column;
         align-items: center;
         align-self: center;
         padding: 30px;
         border-radius: 8px;
-        transition: all .4s ease-in-out;
-        transform: scale(.4) translateY(400px);
+        @include transition(all .4s ease-in-out);
+        @include transform(scale(.4) translateY(400px));
         font-size: 16px;
         &.show {
-            transform: scale(1) translateY(0);
+            @include transform(scale(1) translateY(0));
         }
         h2 {
             text-align: center;
@@ -308,6 +313,7 @@ h1.section-title {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    -ms-flex-direction: column;
     .skills-container {
         padding: 10px;
         font-size: 3rem;
@@ -315,6 +321,7 @@ h1.section-title {
             color: white;
             display: flex;
             flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
             width: 75%;
             justify-content: space-around;
             margin: 0 auto;
@@ -326,6 +333,7 @@ h1.section-title {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+                -ms-flex-direction: column;
                 list-style: none;
                 margin: 25px;
                 border-radius: 20px;
@@ -356,6 +364,7 @@ h1.section-title {
         padding: 20px;
         display: flex;
         flex-direction: column;
+        -ms-flex-direction: column;
         .info p {
             background: #0f0c29;
             background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -379,6 +388,7 @@ h1.section-title {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
             justify-content: space-around;
         }
    }
@@ -397,7 +407,7 @@ h1.section-title {
     margin: 10px;
     cursor: pointer;
     box-shadow: inset 0 0 0 #000;
-    transition: all .3s;
+    @include transition(all .3s);
     &:hover {
         box-shadow: inset 0 0 10px #000;
     }
@@ -460,6 +470,7 @@ h1.section-title {
     .main-menu {
         width: 90%;
         flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
         height: 60px;
         align-items: center;
         justify-content: flex-end;
